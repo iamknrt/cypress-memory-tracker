@@ -1,0 +1,32 @@
+{
+  "name": "@mknrt/cypress-memory-tracker",
+  "version": "1.0.0",
+  "description": "Cypress plugin to track your web app JavaScript memory usage during tests",
+  "main": "dist/cypress-memory-tracker.js",
+  "files": [
+    "dist/"
+  ],
+  "scripts": {
+    "test": "echo \"No tests included\""
+  },
+  "keywords": [
+    "cypress",
+    "memory",
+    "performance",
+    "testing",
+    "plugin"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/iamknrt/cypress-memory-tracker.git"
+  },
+  "author": "iamknrt",
+  "license": "MIT",
+  "peerDependencies": {
+    "cypress": ">=10"
+  },
+  "private": false,
+  "dependencies": {
+    "chalk": "^4.1.2"
+  }
+}
