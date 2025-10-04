@@ -18,7 +18,7 @@
   ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/iamknrt/cypress-memory-tracker.git"
+    "url": "git+https://github.com/iamknrt/cypress-memory-tracker.git"
   },
   "author": "iamknrt",
   "license": "MIT",
