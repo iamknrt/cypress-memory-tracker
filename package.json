@@ -1,6 +1,6 @@
 {
   "name": "@mknrt/cypress-memory-tracker",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Cypress plugin to track your web app JavaScript memory usage during tests",
   "main": "dist/cypress-memory-tracker.js",
   "files": [
