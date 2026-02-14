@@ -1,4 +1,2 @@
-templates/
-run-examples.sh
-README.md
-LICENSE
+# Not needed — package.json "files" field controls what gets published
+# Keeping this file empty to avoid overriding "files" in package.json

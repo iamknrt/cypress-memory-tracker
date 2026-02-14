@@ -20,7 +20,7 @@ class MemoryTracker {
     }
 
     configure(config) {
-        const memoryConfig = config.env.memoryTracking || {};
+        const memoryConfig = config.expose?.memoryTracking || config.env?.memoryTracking || {};
         this.isEnabled     = memoryConfig.enabled === true;
         this.trackSpecOnly = memoryConfig.trackSpecOnly === true;
         this.debugEnabled  = memoryConfig.debug === true;

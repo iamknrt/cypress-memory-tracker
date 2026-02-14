@@ -1,0 +1,19 @@
+# Dependencies
+node_modules/
+
+# IDE
+.idea/
+.vscode/
+.qodo/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+npm-debug.log*
+
+# Misc
+*.tgz
+.npmrc

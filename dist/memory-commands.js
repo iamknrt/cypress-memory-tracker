@@ -11,7 +11,7 @@ let isTracking = false;
  */
 Cypress.Commands.add('startMemoryTracking', (options = {}) => {
     // Проверяем, включено ли отслеживание памяти
-    const memoryConfig = Cypress.env('memoryTracking') || {};
+    const memoryConfig = Cypress.expose('memoryTracking') || {};
     const enableMemoryTracking = memoryConfig.enabled;
     if (!enableMemoryTracking) {
         return;
@@ -89,7 +89,7 @@ Cypress.Commands.add('startMemoryTracking', (options = {}) => {
  * Останавливает отслеживание памяти для текущего теста
  */
 Cypress.Commands.add('stopMemoryTracking', () => {
-    const memoryConfig = Cypress.env('memoryTracking') || {};
+    const memoryConfig = Cypress.expose('memoryTracking') || {};
     const enableMemoryTracking = memoryConfig.enabled;
     if (!enableMemoryTracking || !isTracking) {
         return;
@@ -167,7 +167,7 @@ Cypress.Commands.add('stopMemoryTracking', () => {
  * @param {Object} options - Опции конфигурации
  */
 Cypress.Commands.add('measureMemoryDuring', (actionFn, options = {}) => {
-    const memoryConfig = Cypress.env('memoryTracking') || {};
+    const memoryConfig = Cypress.expose('memoryTracking') || {};
     const enableMemoryTracking = memoryConfig.enabled;
     if (!enableMemoryTracking) {
         if (actionFn) actionFn();
@@ -187,7 +187,7 @@ Cypress.Commands.add('measureMemoryDuring', (actionFn, options = {}) => {
 
 // Автоматическое отслеживание памяти для каждого теста (если включено)
 beforeEach(function () {
-    const memoryConfig = Cypress.env('memoryTracking') || {};
+    const memoryConfig = Cypress.expose('memoryTracking') || {};
     const enableMemoryTracking = memoryConfig.enabled;
 
     if (enableMemoryTracking) {
@@ -199,7 +199,7 @@ beforeEach(function () {
 });
 
 afterEach(function () {
-    const memoryConfig = Cypress.env('memoryTracking') || {};
+    const memoryConfig = Cypress.expose('memoryTracking') || {};
     const enableMemoryTracking = memoryConfig.enabled;
 
     // Всегда останавливаем отслеживание в конце теста
